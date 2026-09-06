@@ -1,0 +1,6 @@
+models/*.gguf
+models/*.bin
+models/*.pt
+models/*.pth
+*.log
+.DS_Store
