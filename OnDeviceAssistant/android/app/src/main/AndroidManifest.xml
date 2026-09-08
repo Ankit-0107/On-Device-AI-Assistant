@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- INTERNET permission removed for privacy -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
       android:name=".MainApplication"

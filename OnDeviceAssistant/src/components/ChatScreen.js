@@ -1,13 +1,72 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, Button, ScrollView, StyleSheet, KeyboardAvoidingView, Platform, ActivityIndicator } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, TextInput, Button, ScrollView, StyleSheet, KeyboardAvoidingView, Platform, ActivityIndicator, TouchableOpacity } from 'react-native';
 import { generateStream } from '../services/LLMService';
 import DebugOverlay from './DebugOverlay';
+import Tts from 'react-native-tts';
+import Voice from '@react-native-community/voice';
 
 export default function ChatScreen({ onSettingsPress }) {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const [isGenerating, setIsGenerating] = useState(false);
   const [stats, setStats] = useState(null);
+  const [isListening, setIsListening] = useState(false);
+
+  useEffect(() => {
+    Voice.onSpeechStart = onSpeechStart;
+    Voice.onSpeechEnd = onSpeechEnd;
+    Voice.onSpeechError = onSpeechError;
+    Voice.onSpeechResults = onSpeechResults;
+
+    Tts.getInitStatus().then(() => {
+      Tts.setDefaultLanguage('en-US');
+      Tts.setDefaultRate(0.5);
+    }).catch(err => {
+      if (err.code === 'no_engine') {
+        Tts.requestInstallEngine();
+      }
+    });
+
+    return () => {
+      Voice.destroy().then(Voice.removeAllListeners);
+    };
+  }, []);
+
+  const onSpeechStart = (e) => {
+    setIsListening(true);
+  };
+
+  const onSpeechEnd = (e) => {
+    setIsListening(false);
+  };
+
+  const onSpeechError = (e) => {
+    setIsListening(false);
+    console.error('Speech error: ', e);
+  };
+
+  const onSpeechResults = (e) => {
+    if (e.value && e.value.length > 0) {
+      setInput((prev) => prev + (prev ? ' ' : '') + e.value[0]);
+    }
+  };
+
+  const startListening = async () => {
+    try {
+      Tts.stop();
+      await Voice.start('en-US');
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  const stopListening = async () => {
+    try {
+      await Voice.stop();
+    } catch (e) {
+      console.error(e);
+    }
+  };
 
   const sendMessage = () => {
     if (!input.trim() || isGenerating) return;
@@ -34,6 +93,9 @@ export default function ChatScreen({ onSettingsPress }) {
       },
       (finalText) => {
         setIsGenerating(false);
+        if (finalText && finalText.trim().length > 0) {
+          Tts.speak(finalText);
+        }
       },
       (error) => {
         assistantMessage.content += `\n[Error: ${error.message}]`;
@@ -75,6 +137,13 @@ export default function ChatScreen({ onSettingsPress }) {
           placeholderTextColor="#999"
           editable={!isGenerating}
         />
+        <TouchableOpacity 
+          style={[styles.micButton, isListening && styles.micButtonListening]}
+          onPressIn={startListening}
+          onPressOut={stopListening}
+        >
+          <Text style={styles.micText}>{isListening ? '🎙️...' : '🎙️'}</Text>
+        </TouchableOpacity>
         <Button title="Send" onPress={sendMessage} disabled={isGenerating || !input.trim()} />
       </View>
     </KeyboardAvoidingView>
@@ -94,4 +163,7 @@ const styles = StyleSheet.create({
   loading: { alignSelf: 'flex-start', margin: 10 },
   inputArea: { flexDirection: 'row', padding: 10, backgroundColor: '#fff', alignItems: 'center', borderTopWidth: 1, borderColor: '#eee' },
   input: { flex: 1, backgroundColor: '#f0f0f0', borderRadius: 20, paddingHorizontal: 15, paddingVertical: 10, marginRight: 10, color: '#000', fontSize: 16 },
+  micButton: { padding: 10, borderRadius: 20, backgroundColor: '#eee', marginRight: 10 },
+  micButtonListening: { backgroundColor: '#ffcc00' },
+  micText: { fontSize: 18 },
 });
