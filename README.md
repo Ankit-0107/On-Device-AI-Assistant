@@ -49,9 +49,32 @@ On-Device-AI-Assistant/
 
 ---
 
+## 💻 Hardware Requirements & Low-End Systems
+
+Running an AI model locally along with an Android Emulator requires significant system resources. 
+
+**Recommended System:**
+- 16GB+ RAM
+- Modern multi-core CPU (Intel i5/i7 10th Gen+, AMD Ryzen 5+, or Apple M1/M2)
+
+### ⚠️ Running on Low-End Laptops (e.g., 8GB RAM, Pentium/Celeron)
+If you have an older laptop with only 8GB of RAM or a slower processor, **do not use the Android Emulator**. The combination of Windows (4GB), Android Studio (2GB), the Emulator (3GB), and the AI model (1GB) will exceed 8GB of RAM, causing the system to freeze or crash heavily.
+
+**Survival Guide for Low-End Systems:**
+Instead of an emulator, **use a physical Android phone**:
+1. Connect a real Android phone to the laptop via a USB cable.
+2. Enable **Developer Options** and **USB Debugging** on the phone.
+3. Close Android Studio completely (it uses too much RAM). Use a lightweight editor like VS Code or Notepad.
+4. Push the model to the physical device using `adb` (see Step 5 below).
+5. Run `npm run android`.
+   
+This builds the app on the laptop but runs the heavy AI inference entirely on the physical phone, freeing up your laptop's RAM and CPU!
+
+---
+
 ## 🚀 Setup Guide — Android Emulator
 
-Follow these steps **exactly** to get the app running on an Android Emulator. Instructions are provided for both **Windows** and **macOS**.
+Follow these steps **exactly** to get the app running on an Android Emulator or a physical device. Instructions are provided for both **Windows** and **macOS**.
 
 ---
 
