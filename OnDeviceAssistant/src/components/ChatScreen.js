@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, Button, ScrollView, StyleSheet, KeyboardAvoidingView, Platform, ActivityIndicator, TouchableOpacity, Alert } from 'react-native';
 import { generateStream } from '../services/LLMService';
+import { handleIntent } from '../services/ActionHandler';
 import DebugOverlay from './DebugOverlay';
 import Tts from 'react-native-tts';
 import Voice from '@react-native-community/voice';
@@ -107,8 +108,7 @@ export default function ChatScreen({ onSettingsPress }) {
       (intent) => {
         setMessages(prevMessages);
         setIsGenerating(false);
-        Alert.alert("Intent Detected", JSON.stringify(intent));
-        Tts.speak(JSON.stringify(intent));
+        handleIntent(intent);
       }
     );
   };
