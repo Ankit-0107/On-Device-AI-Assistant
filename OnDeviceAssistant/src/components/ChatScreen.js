@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, Button, ScrollView, StyleSheet, KeyboardAvoidingView, Platform, ActivityIndicator, TouchableOpacity, Alert } from 'react-native';
+import { View, Text, TextInput, Button, ScrollView, StyleSheet, KeyboardAvoidingView, Platform, ActivityIndicator, TouchableOpacity, Alert, NativeModules, NativeEventEmitter, PermissionsAndroid } from 'react-native';
 import { generateStream } from '../services/LLMService';
 import { handleIntent } from '../services/ActionHandler';
 import DebugOverlay from './DebugOverlay';
 import Tts from 'react-native-tts';
-import Voice from '@react-native-community/voice';
+
+const { SpeechModule } = NativeModules;
+const speechEvents = SpeechModule ? new NativeEventEmitter(SpeechModule) : null;
 
 export default function ChatScreen({ onSettingsPress }) {
   const [messages, setMessages] = useState([]);
@@ -14,11 +16,7 @@ export default function ChatScreen({ onSettingsPress }) {
   const [isListening, setIsListening] = useState(false);
 
   useEffect(() => {
-    Voice.onSpeechStart = onSpeechStart;
-    Voice.onSpeechEnd = onSpeechEnd;
-    Voice.onSpeechError = onSpeechError;
-    Voice.onSpeechResults = onSpeechResults;
-
+    // TTS init
     Tts.getInitStatus().then(() => {
       Tts.setDefaultLanguage('en-US');
       Tts.setDefaultRate(0.5);
@@ -28,42 +26,77 @@ export default function ChatScreen({ onSettingsPress }) {
       }
     });
 
+    // Speech recognition events
+    if (!speechEvents) {
+      console.warn('SpeechModule not available');
+      return;
+    }
+
+    const subs = [
+      speechEvents.addListener('onSpeechStart', () => {
+        setIsListening(true);
+      }),
+      speechEvents.addListener('onSpeechEnd', () => {
+        setIsListening(false);
+      }),
+      speechEvents.addListener('onSpeechError', (e) => {
+        setIsListening(false);
+        console.warn('Speech error:', e.error);
+      }),
+      speechEvents.addListener('onSpeechResults', (e) => {
+        if (e.value && e.value.length > 0) {
+          setInput((prev) => prev + (prev ? ' ' : '') + e.value[0]);
+        }
+      }),
+    ];
+
     return () => {
-      Voice.destroy().then(Voice.removeAllListeners);
+      subs.forEach(sub => sub.remove());
+      if (SpeechModule) {
+        SpeechModule.destroyRecognizer();
+      }
     };
   }, []);
 
-  const onSpeechStart = (e) => {
-    setIsListening(true);
-  };
-
-  const onSpeechEnd = (e) => {
-    setIsListening(false);
-  };
-
-  const onSpeechError = (e) => {
-    setIsListening(false);
-    console.error('Speech error: ', e);
-  };
-
-  const onSpeechResults = (e) => {
-    if (e.value && e.value.length > 0) {
-      setInput((prev) => prev + (prev ? ' ' : '') + e.value[0]);
+  const requestMicPermission = async () => {
+    try {
+      const granted = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.RECORD_AUDIO,
+        {
+          title: 'Microphone Permission',
+          message: 'This app needs access to your microphone for voice input.',
+          buttonPositive: 'OK',
+        }
+      );
+      return granted === PermissionsAndroid.RESULTS.GRANTED;
+    } catch (err) {
+      console.warn(err);
+      return false;
     }
   };
 
   const startListening = async () => {
+    if (!SpeechModule) {
+      Alert.alert('Not Available', 'Speech recognition is not available on this device.');
+      return;
+    }
     try {
+      const hasPermission = await requestMicPermission();
+      if (!hasPermission) {
+        Alert.alert('Permission Denied', 'Microphone permission is required for voice input.');
+        return;
+      }
       Tts.stop();
-      await Voice.start('en-US');
+      SpeechModule.startListening('en-US');
     } catch (e) {
       console.error(e);
     }
   };
 
   const stopListening = async () => {
+    if (!SpeechModule) return;
     try {
-      await Voice.stop();
+      SpeechModule.stopListening();
     } catch (e) {
       console.error(e);
     }

@@ -11,7 +11,6 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
-    "@react-native-community/voice": "^1.1.9",
     "@react-native/new-app-screen": "0.87.0",
     "llama.rn": "^0.13.0-rc.0",
     "react": "19.2.3",
