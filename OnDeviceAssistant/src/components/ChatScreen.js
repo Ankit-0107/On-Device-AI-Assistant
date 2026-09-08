@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, Button, ScrollView, StyleSheet, KeyboardAvoidingView, Platform, ActivityIndicator, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, Button, ScrollView, StyleSheet, KeyboardAvoidingView, Platform, ActivityIndicator, TouchableOpacity, Alert } from 'react-native';
 import { generateStream } from '../services/LLMService';
 import DebugOverlay from './DebugOverlay';
 import Tts from 'react-native-tts';
@@ -72,7 +72,9 @@ export default function ChatScreen({ onSettingsPress }) {
     if (!input.trim() || isGenerating) return;
 
     const userMessage = { role: 'user', content: input };
+    const prevMessages = [...messages];
     const newHistory = [...messages, userMessage];
+    
     setMessages(newHistory);
     setInput('');
     setIsGenerating(true);
@@ -83,7 +85,7 @@ export default function ChatScreen({ onSettingsPress }) {
 
     generateStream(
       userMessage.content,
-      newHistory,
+      prevMessages,
       (token) => {
         assistantMessage.content += token;
         setMessages([...newHistory, { ...assistantMessage }]);
@@ -101,6 +103,12 @@ export default function ChatScreen({ onSettingsPress }) {
         assistantMessage.content += `\n[Error: ${error.message}]`;
         setMessages([...newHistory, { ...assistantMessage }]);
         setIsGenerating(false);
+      },
+      (intent) => {
+        setMessages(prevMessages);
+        setIsGenerating(false);
+        Alert.alert("Intent Detected", JSON.stringify(intent));
+        Tts.speak(JSON.stringify(intent));
       }
     );
   };
