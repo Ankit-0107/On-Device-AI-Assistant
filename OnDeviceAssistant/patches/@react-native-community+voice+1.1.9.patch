@@ -1,0 +1,75 @@
+diff --git a/node_modules/@react-native-community/voice/android/build.gradle b/node_modules/@react-native-community/voice/android/build.gradle
+index 091c5ae..3e8a773 100644
+--- a/node_modules/@react-native-community/voice/android/build.gradle
++++ b/node_modules/@react-native-community/voice/android/build.gradle
+@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
+ 
+ repositories {
+     mavenLocal()
+-    jcenter()
++    mavenCentral()
+     maven {
+         // For developing the library outside the context of the example app, expect `react-native`
+         // to be installed at `./node_modules`.
+@@ -14,17 +14,15 @@ repositories {
+     }
+ }
+ 
+-def DEFAULT_COMPILE_SDK_VERSION = 23
+-def DEFAULT_BUILD_TOOLS_VERSION = "23.0.2"
+-def DEFAULT_TARGET_SDK_VERSION = 23
+-def DEFAULT_SUPPORT_LIB_VERSION = "23.1.1"
++def DEFAULT_COMPILE_SDK_VERSION = 34
++def DEFAULT_BUILD_TOOLS_VERSION = "34.0.0"
++def DEFAULT_TARGET_SDK_VERSION = 34
+ 
+ android {
+-    compileSdkVersion rootProject.hasProperty('compileSdkVersion') ? rootProject.compileSdkVersion : DEFAULT_COMPILE_SDK_VERSION
+-    buildToolsVersion rootProject.hasProperty('buildToolsVersion') ? rootProject.buildToolsVersion : DEFAULT_BUILD_TOOLS_VERSION
++    compileSdk rootProject.hasProperty('compileSdkVersion') ? rootProject.compileSdkVersion : DEFAULT_COMPILE_SDK_VERSION
+ 
+     defaultConfig {
+-        minSdkVersion 15
++        minSdkVersion 21
+         targetSdkVersion rootProject.hasProperty('targetSdkVersion') ? rootProject.targetSdkVersion : DEFAULT_TARGET_SDK_VERSION
+         versionCode 1
+         versionName "1.0"
+@@ -32,7 +30,7 @@ android {
+     buildTypes {
+         release {
+             minifyEnabled false
+-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
++            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+         }
+     }
+ }
+@@ -40,10 +38,10 @@ android {
+ buildscript {
+     if (project == rootProject) {
+         repositories {
+-            jcenter()
++            mavenCentral()
+         }
+         dependencies {
+-            classpath 'com.android.tools.build:gradle:1.5.0'
++            classpath 'com.android.tools.build:gradle:8.0.0'
+ 
+             // NOTE: Do not place your application dependencies here; they belong
+             // in the individual module build.gradle files
+@@ -53,15 +51,12 @@ buildscript {
+ 
+ allprojects {
+     repositories {
+-        jcenter()
++        mavenCentral()
+     }
+ }
+ 
+-def supportVersion = rootProject.hasProperty('supportLibVersion') ? rootProject.supportLibVersion : DEFAULT_SUPPORT_LIB_VERSION
+-
+ dependencies {
+     implementation fileTree(dir: 'libs', include: ['*.jar'])
+     testImplementation 'junit:junit:4.12'
+-    implementation "com.android.support:appcompat-v7:${supportVersion}"
+     implementation 'com.facebook.react:react-native:+'
+ }

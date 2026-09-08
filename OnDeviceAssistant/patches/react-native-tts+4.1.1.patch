@@ -1,0 +1,311 @@
+diff --git a/node_modules/react-native-tts/android/build.gradle b/node_modules/react-native-tts/android/build.gradle
+index dbbe046..9d70cdf 100644
+--- a/node_modules/react-native-tts/android/build.gradle
++++ b/node_modules/react-native-tts/android/build.gradle
+@@ -4,7 +4,7 @@ def safeExtGet(prop, fallback) {
+ 
+ buildscript {
+     repositories {
+-        jcenter()
++        mavenCentral()
+     }
+ 
+     dependencies {
+diff --git a/node_modules/react-native-tts/android/build/.transforms/6045392f7ef1f51d278ab264be2a339f/results.bin b/node_modules/react-native-tts/android/build/.transforms/6045392f7ef1f51d278ab264be2a339f/results.bin
+new file mode 100644
+index 0000000..7ed749e
+--- /dev/null
++++ b/node_modules/react-native-tts/android/build/.transforms/6045392f7ef1f51d278ab264be2a339f/results.bin
+@@ -0,0 +1 @@
++o/bundleLibRuntimeToDirDebug
+diff --git a/node_modules/react-native-tts/android/build/.transforms/6045392f7ef1f51d278ab264be2a339f/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/net/no_mad/tts/TextToSpeechModule$1.dex b/node_modules/react-native-tts/android/build/.transforms/6045392f7ef1f51d278ab264be2a339f/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/net/no_mad/tts/TextToSpeechModule$1.dex
+new file mode 100644
+index 0000000..486c0da
+Binary files /dev/null and b/node_modules/react-native-tts/android/build/.transforms/6045392f7ef1f51d278ab264be2a339f/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/net/no_mad/tts/TextToSpeechModule$1.dex differ
+diff --git a/node_modules/react-native-tts/android/build/.transforms/6045392f7ef1f51d278ab264be2a339f/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/net/no_mad/tts/TextToSpeechModule$2.dex b/node_modules/react-native-tts/android/build/.transforms/6045392f7ef1f51d278ab264be2a339f/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/net/no_mad/tts/TextToSpeechModule$2.dex
+new file mode 100644
+index 0000000..6d221db
+Binary files /dev/null and b/node_modules/react-native-tts/android/build/.transforms/6045392f7ef1f51d278ab264be2a339f/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/net/no_mad/tts/TextToSpeechModule$2.dex differ
+diff --git a/node_modules/react-native-tts/android/build/.transforms/6045392f7ef1f51d278ab264be2a339f/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/net/no_mad/tts/TextToSpeechModule$3.dex b/node_modules/react-native-tts/android/build/.transforms/6045392f7ef1f51d278ab264be2a339f/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/net/no_mad/tts/TextToSpeechModule$3.dex
+new file mode 100644
+index 0000000..020ffd1
+Binary files /dev/null and b/node_modules/react-native-tts/android/build/.transforms/6045392f7ef1f51d278ab264be2a339f/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/net/no_mad/tts/TextToSpeechModule$3.dex differ
+diff --git a/node_modules/react-native-tts/android/build/.transforms/6045392f7ef1f51d278ab264be2a339f/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/net/no_mad/tts/TextToSpeechModule.dex b/node_modules/react-native-tts/android/build/.transforms/6045392f7ef1f51d278ab264be2a339f/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/net/no_mad/tts/TextToSpeechModule.dex
+new file mode 100644
+index 0000000..a87e70c
+Binary files /dev/null and b/node_modules/react-native-tts/android/build/.transforms/6045392f7ef1f51d278ab264be2a339f/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/net/no_mad/tts/TextToSpeechModule.dex differ
+diff --git a/node_modules/react-native-tts/android/build/.transforms/6045392f7ef1f51d278ab264be2a339f/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/net/no_mad/tts/TextToSpeechPackage.dex b/node_modules/react-native-tts/android/build/.transforms/6045392f7ef1f51d278ab264be2a339f/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/net/no_mad/tts/TextToSpeechPackage.dex
+new file mode 100644
+index 0000000..ad04321
+Binary files /dev/null and b/node_modules/react-native-tts/android/build/.transforms/6045392f7ef1f51d278ab264be2a339f/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/net/no_mad/tts/TextToSpeechPackage.dex differ
+diff --git a/node_modules/react-native-tts/android/build/.transforms/6045392f7ef1f51d278ab264be2a339f/transformed/bundleLibRuntimeToDirDebug/desugar_graph.bin b/node_modules/react-native-tts/android/build/.transforms/6045392f7ef1f51d278ab264be2a339f/transformed/bundleLibRuntimeToDirDebug/desugar_graph.bin
+new file mode 100644
+index 0000000..18b402a
+Binary files /dev/null and b/node_modules/react-native-tts/android/build/.transforms/6045392f7ef1f51d278ab264be2a339f/transformed/bundleLibRuntimeToDirDebug/desugar_graph.bin differ
+diff --git a/node_modules/react-native-tts/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/AndroidManifest.xml b/node_modules/react-native-tts/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/AndroidManifest.xml
+new file mode 100644
+index 0000000..863ea35
+--- /dev/null
++++ b/node_modules/react-native-tts/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/AndroidManifest.xml
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="net.no_mad.tts" >
++
++    <uses-sdk android:minSdkVersion="24" />
++
++</manifest>
+\ No newline at end of file
+diff --git a/node_modules/react-native-tts/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/output-metadata.json b/node_modules/react-native-tts/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/output-metadata.json
+new file mode 100644
+index 0000000..ca76882
+--- /dev/null
++++ b/node_modules/react-native-tts/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/output-metadata.json
+@@ -0,0 +1,18 @@
++{
++  "version": 3,
++  "artifactType": {
++    "type": "AAPT_FRIENDLY_MERGED_MANIFESTS",
++    "kind": "Directory"
++  },
++  "applicationId": "net.no_mad.tts",
++  "variantName": "debug",
++  "elements": [
++    {
++      "type": "SINGLE",
++      "filters": [],
++      "attributes": [],
++      "outputFile": "AndroidManifest.xml"
++    }
++  ],
++  "elementType": "File"
++}
+\ No newline at end of file
+diff --git a/node_modules/react-native-tts/android/build/intermediates/aar_main_jar/debug/syncDebugLibJars/classes.jar b/node_modules/react-native-tts/android/build/intermediates/aar_main_jar/debug/syncDebugLibJars/classes.jar
+new file mode 100644
+index 0000000..19acf7b
+Binary files /dev/null and b/node_modules/react-native-tts/android/build/intermediates/aar_main_jar/debug/syncDebugLibJars/classes.jar differ
+diff --git a/node_modules/react-native-tts/android/build/intermediates/aar_metadata/debug/writeDebugAarMetadata/aar-metadata.properties b/node_modules/react-native-tts/android/build/intermediates/aar_metadata/debug/writeDebugAarMetadata/aar-metadata.properties
+new file mode 100644
+index 0000000..b4c821b
+--- /dev/null
++++ b/node_modules/react-native-tts/android/build/intermediates/aar_metadata/debug/writeDebugAarMetadata/aar-metadata.properties
+@@ -0,0 +1,7 @@
++aarFormatVersion=1.0
++aarMetadataVersion=1.0
++minCompileSdk=37
++minCompileMinorSdk=0
++minCompileSdkExtension=0
++minAndroidGradlePluginVersion=1.0.0
++coreLibraryDesugaringEnabled=false
+diff --git a/node_modules/react-native-tts/android/build/intermediates/android_res_source_set_path_map/debug/mapDebugSourceSetPaths/file-map.txt b/node_modules/react-native-tts/android/build/intermediates/android_res_source_set_path_map/debug/mapDebugSourceSetPaths/file-map.txt
+new file mode 100644
+index 0000000..76d5a3d
+--- /dev/null
++++ b/node_modules/react-native-tts/android/build/intermediates/android_res_source_set_path_map/debug/mapDebugSourceSetPaths/file-map.txt
+@@ -0,0 +1,9 @@
++net.no_mad.tts.react-native-tts-pngs-0 C:\Minor Project\OnDeviceAssistant\node_modules\react-native-tts\android\build\generated\res\pngs\debug
++net.no_mad.tts.react-native-tts-updated_navigation_xml-1 C:\Minor Project\OnDeviceAssistant\node_modules\react-native-tts\android\build\generated\updated_navigation_xml\debug
++net.no_mad.tts.react-native-tts-mergeDebugResources-2 C:\Minor Project\OnDeviceAssistant\node_modules\react-native-tts\android\build\intermediates\incremental\debug\mergeDebugResources\merged.dir
++net.no_mad.tts.react-native-tts-mergeDebugResources-3 C:\Minor Project\OnDeviceAssistant\node_modules\react-native-tts\android\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir
++net.no_mad.tts.react-native-tts-debug-4 C:\Minor Project\OnDeviceAssistant\node_modules\react-native-tts\android\build\intermediates\merged_res\debug\mergeDebugResources
++net.no_mad.tts.react-native-tts-debug-5 C:\Minor Project\OnDeviceAssistant\node_modules\react-native-tts\android\build\intermediates\packaged_res\debug\packageDebugResources
++net.no_mad.tts.react-native-tts-debug-6 C:\Minor Project\OnDeviceAssistant\node_modules\react-native-tts\android\src\debug\res
++net.no_mad.tts.react-native-tts-main-7 C:\Minor Project\OnDeviceAssistant\node_modules\react-native-tts\android\src\main\res
++gradleHome-0 C:\Users\hp\.gradle
+\ No newline at end of file
+diff --git a/node_modules/react-native-tts/android/build/intermediates/annotation_processor_list/debug/javaPreCompileDebug/annotationProcessors.json b/node_modules/react-native-tts/android/build/intermediates/annotation_processor_list/debug/javaPreCompileDebug/annotationProcessors.json
+new file mode 100644
+index 0000000..9e26dfe
+--- /dev/null
++++ b/node_modules/react-native-tts/android/build/intermediates/annotation_processor_list/debug/javaPreCompileDebug/annotationProcessors.json
+@@ -0,0 +1 @@
++{}
+\ No newline at end of file
+diff --git a/node_modules/react-native-tts/android/build/intermediates/annotations_typedef_file/debug/extractDebugAnnotations/typedefs.txt b/node_modules/react-native-tts/android/build/intermediates/annotations_typedef_file/debug/extractDebugAnnotations/typedefs.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-tts/android/build/intermediates/compile_library_classes_jar/debug/bundleLibCompileToJarDebug/classes.jar b/node_modules/react-native-tts/android/build/intermediates/compile_library_classes_jar/debug/bundleLibCompileToJarDebug/classes.jar
+new file mode 100644
+index 0000000..145216b
+Binary files /dev/null and b/node_modules/react-native-tts/android/build/intermediates/compile_library_classes_jar/debug/bundleLibCompileToJarDebug/classes.jar differ
+diff --git a/node_modules/react-native-tts/android/build/intermediates/compile_r_class_jar/debug/generateDebugRFile/R.jar b/node_modules/react-native-tts/android/build/intermediates/compile_r_class_jar/debug/generateDebugRFile/R.jar
+new file mode 100644
+index 0000000..43d354b
+Binary files /dev/null and b/node_modules/react-native-tts/android/build/intermediates/compile_r_class_jar/debug/generateDebugRFile/R.jar differ
+diff --git a/node_modules/react-native-tts/android/build/intermediates/compile_symbol_list/debug/generateDebugRFile/R.txt b/node_modules/react-native-tts/android/build/intermediates/compile_symbol_list/debug/generateDebugRFile/R.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-tts/android/build/intermediates/incremental/debug-mergeJavaRes/merge-state b/node_modules/react-native-tts/android/build/intermediates/incremental/debug-mergeJavaRes/merge-state
+new file mode 100644
+index 0000000..1c983fc
+Binary files /dev/null and b/node_modules/react-native-tts/android/build/intermediates/incremental/debug-mergeJavaRes/merge-state differ
+diff --git a/node_modules/react-native-tts/android/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties b/node_modules/react-native-tts/android/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties
+new file mode 100644
+index 0000000..4e3ca5d
+--- /dev/null
++++ b/node_modules/react-native-tts/android/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties
+@@ -0,0 +1 @@
++#Wed Sep 09 01:26:49 IST 2026
+diff --git a/node_modules/react-native-tts/android/build/intermediates/incremental/debug/packageDebugResources/merger.xml b/node_modules/react-native-tts/android/build/intermediates/incremental/debug/packageDebugResources/merger.xml
+new file mode 100644
+index 0000000..747aa35
+--- /dev/null
++++ b/node_modules/react-native-tts/android/build/intermediates/incremental/debug/packageDebugResources/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Minor Project\OnDeviceAssistant\node_modules\react-native-tts\android\src\main\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main" generated-set="main$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~:!&lt;dir>navigation"><source path="C:\Minor Project\OnDeviceAssistant\node_modules\react-native-tts\android\src\main\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Minor Project\OnDeviceAssistant\node_modules\react-native-tts\android\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~:!&lt;dir>navigation"><source path="C:\Minor Project\OnDeviceAssistant\node_modules\react-native-tts\android\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"/><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated" generated-set="generated$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~:!&lt;dir>navigation"/><mergedItems/></merger>
+\ No newline at end of file
+diff --git a/node_modules/react-native-tts/android/build/intermediates/incremental/mergeDebugAssets/merger.xml b/node_modules/react-native-tts/android/build/intermediates/incremental/mergeDebugAssets/merger.xml
+new file mode 100644
+index 0000000..57fbbdb
+--- /dev/null
++++ b/node_modules/react-native-tts/android/build/intermediates/incremental/mergeDebugAssets/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Minor Project\OnDeviceAssistant\node_modules\react-native-tts\android\src\main\assets"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Minor Project\OnDeviceAssistant\node_modules\react-native-tts\android\src\debug\assets"/></dataSet></merger>
+\ No newline at end of file
+diff --git a/node_modules/react-native-tts/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml b/node_modules/react-native-tts/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml
+new file mode 100644
+index 0000000..f0f0aae
+--- /dev/null
++++ b/node_modules/react-native-tts/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Minor Project\OnDeviceAssistant\node_modules\react-native-tts\android\src\main\jniLibs"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Minor Project\OnDeviceAssistant\node_modules\react-native-tts\android\src\debug\jniLibs"/></dataSet></merger>
+\ No newline at end of file
+diff --git a/node_modules/react-native-tts/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/net/no_mad/tts/TextToSpeechModule$1.class b/node_modules/react-native-tts/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/net/no_mad/tts/TextToSpeechModule$1.class
+new file mode 100644
+index 0000000..4030d58
+Binary files /dev/null and b/node_modules/react-native-tts/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/net/no_mad/tts/TextToSpeechModule$1.class differ
+diff --git a/node_modules/react-native-tts/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/net/no_mad/tts/TextToSpeechModule$2.class b/node_modules/react-native-tts/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/net/no_mad/tts/TextToSpeechModule$2.class
+new file mode 100644
+index 0000000..ab66653
+Binary files /dev/null and b/node_modules/react-native-tts/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/net/no_mad/tts/TextToSpeechModule$2.class differ
+diff --git a/node_modules/react-native-tts/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/net/no_mad/tts/TextToSpeechModule$3.class b/node_modules/react-native-tts/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/net/no_mad/tts/TextToSpeechModule$3.class
+new file mode 100644
+index 0000000..1a25f2c
+Binary files /dev/null and b/node_modules/react-native-tts/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/net/no_mad/tts/TextToSpeechModule$3.class differ
+diff --git a/node_modules/react-native-tts/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/net/no_mad/tts/TextToSpeechModule.class b/node_modules/react-native-tts/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/net/no_mad/tts/TextToSpeechModule.class
+new file mode 100644
+index 0000000..2c55898
+Binary files /dev/null and b/node_modules/react-native-tts/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/net/no_mad/tts/TextToSpeechModule.class differ
+diff --git a/node_modules/react-native-tts/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/net/no_mad/tts/TextToSpeechPackage.class b/node_modules/react-native-tts/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/net/no_mad/tts/TextToSpeechPackage.class
+new file mode 100644
+index 0000000..14d559b
+Binary files /dev/null and b/node_modules/react-native-tts/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/net/no_mad/tts/TextToSpeechPackage.class differ
+diff --git a/node_modules/react-native-tts/android/build/intermediates/local_only_symbol_list/debug/parseDebugLocalResources/R-def.txt b/node_modules/react-native-tts/android/build/intermediates/local_only_symbol_list/debug/parseDebugLocalResources/R-def.txt
+new file mode 100644
+index 0000000..78ac5b8
+--- /dev/null
++++ b/node_modules/react-native-tts/android/build/intermediates/local_only_symbol_list/debug/parseDebugLocalResources/R-def.txt
+@@ -0,0 +1,2 @@
++R_DEF: Internal format may change without notice
++local
+diff --git a/node_modules/react-native-tts/android/build/intermediates/manifest_merge_blame_file/debug/processDebugManifest/manifest-merger-blame-debug-report.txt b/node_modules/react-native-tts/android/build/intermediates/manifest_merge_blame_file/debug/processDebugManifest/manifest-merger-blame-debug-report.txt
+new file mode 100644
+index 0000000..38ee2a5
+--- /dev/null
++++ b/node_modules/react-native-tts/android/build/intermediates/manifest_merge_blame_file/debug/processDebugManifest/manifest-merger-blame-debug-report.txt
+@@ -0,0 +1,9 @@
++1<?xml version="1.0" encoding="utf-8"?>
++2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++3    package="net.no_mad.tts" >
++4
++5    <uses-sdk android:minSdkVersion="24" />
++5-->INJECTED
++5-->INJECTED
++6
++7</manifest>
+diff --git a/node_modules/react-native-tts/android/build/intermediates/merged_java_res/debug/mergeDebugJavaResource/feature-react-native-tts.jar b/node_modules/react-native-tts/android/build/intermediates/merged_java_res/debug/mergeDebugJavaResource/feature-react-native-tts.jar
+new file mode 100644
+index 0000000..15cb0ec
+Binary files /dev/null and b/node_modules/react-native-tts/android/build/intermediates/merged_java_res/debug/mergeDebugJavaResource/feature-react-native-tts.jar differ
+diff --git a/node_modules/react-native-tts/android/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml b/node_modules/react-native-tts/android/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml
+new file mode 100644
+index 0000000..863ea35
+--- /dev/null
++++ b/node_modules/react-native-tts/android/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="net.no_mad.tts" >
++
++    <uses-sdk android:minSdkVersion="24" />
++
++</manifest>
+\ No newline at end of file
+diff --git a/node_modules/react-native-tts/android/build/intermediates/navigation_json/debug/extractDeepLinksDebug/navigation.json b/node_modules/react-native-tts/android/build/intermediates/navigation_json/debug/extractDeepLinksDebug/navigation.json
+new file mode 100644
+index 0000000..0637a08
+--- /dev/null
++++ b/node_modules/react-native-tts/android/build/intermediates/navigation_json/debug/extractDeepLinksDebug/navigation.json
+@@ -0,0 +1 @@
++[]
+\ No newline at end of file
+diff --git a/node_modules/react-native-tts/android/build/intermediates/nested_resources_validation_report/debug/generateDebugResources/nestedResourcesValidationReport.txt b/node_modules/react-native-tts/android/build/intermediates/nested_resources_validation_report/debug/generateDebugResources/nestedResourcesValidationReport.txt
+new file mode 100644
+index 0000000..08f4ebe
+--- /dev/null
++++ b/node_modules/react-native-tts/android/build/intermediates/nested_resources_validation_report/debug/generateDebugResources/nestedResourcesValidationReport.txt
+@@ -0,0 +1 @@
++0 Warning/Error
+\ No newline at end of file
+diff --git a/node_modules/react-native-tts/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/net/no_mad/tts/TextToSpeechModule$1.class b/node_modules/react-native-tts/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/net/no_mad/tts/TextToSpeechModule$1.class
+new file mode 100644
+index 0000000..4030d58
+Binary files /dev/null and b/node_modules/react-native-tts/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/net/no_mad/tts/TextToSpeechModule$1.class differ
+diff --git a/node_modules/react-native-tts/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/net/no_mad/tts/TextToSpeechModule$2.class b/node_modules/react-native-tts/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/net/no_mad/tts/TextToSpeechModule$2.class
+new file mode 100644
+index 0000000..ab66653
+Binary files /dev/null and b/node_modules/react-native-tts/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/net/no_mad/tts/TextToSpeechModule$2.class differ
+diff --git a/node_modules/react-native-tts/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/net/no_mad/tts/TextToSpeechModule$3.class b/node_modules/react-native-tts/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/net/no_mad/tts/TextToSpeechModule$3.class
+new file mode 100644
+index 0000000..1a25f2c
+Binary files /dev/null and b/node_modules/react-native-tts/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/net/no_mad/tts/TextToSpeechModule$3.class differ
+diff --git a/node_modules/react-native-tts/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/net/no_mad/tts/TextToSpeechModule.class b/node_modules/react-native-tts/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/net/no_mad/tts/TextToSpeechModule.class
+new file mode 100644
+index 0000000..2c55898
+Binary files /dev/null and b/node_modules/react-native-tts/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/net/no_mad/tts/TextToSpeechModule.class differ
+diff --git a/node_modules/react-native-tts/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/net/no_mad/tts/TextToSpeechPackage.class b/node_modules/react-native-tts/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/net/no_mad/tts/TextToSpeechPackage.class
+new file mode 100644
+index 0000000..14d559b
+Binary files /dev/null and b/node_modules/react-native-tts/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/net/no_mad/tts/TextToSpeechPackage.class differ
+diff --git a/node_modules/react-native-tts/android/build/intermediates/symbol_list_with_package_name/debug/generateDebugRFile/package-aware-r.txt b/node_modules/react-native-tts/android/build/intermediates/symbol_list_with_package_name/debug/generateDebugRFile/package-aware-r.txt
+new file mode 100644
+index 0000000..0bace5b
+--- /dev/null
++++ b/node_modules/react-native-tts/android/build/intermediates/symbol_list_with_package_name/debug/generateDebugRFile/package-aware-r.txt
+@@ -0,0 +1 @@
++net.no_mad.tts
+diff --git a/node_modules/react-native-tts/android/build/outputs/aar/react-native-tts-debug.aar b/node_modules/react-native-tts/android/build/outputs/aar/react-native-tts-debug.aar
+new file mode 100644
+index 0000000..cfa33cc
+Binary files /dev/null and b/node_modules/react-native-tts/android/build/outputs/aar/react-native-tts-debug.aar differ
+diff --git a/node_modules/react-native-tts/android/build/outputs/logs/manifest-merger-debug-report.txt b/node_modules/react-native-tts/android/build/outputs/logs/manifest-merger-debug-report.txt
+new file mode 100644
+index 0000000..292c90a
+--- /dev/null
++++ b/node_modules/react-native-tts/android/build/outputs/logs/manifest-merger-debug-report.txt
+@@ -0,0 +1,17 @@
++-- Merging decision tree log ---
++manifest
++ADDED from C:\Minor Project\OnDeviceAssistant\node_modules\react-native-tts\android\src\main\AndroidManifest.xml:1:1-2:12
++INJECTED from C:\Minor Project\OnDeviceAssistant\node_modules\react-native-tts\android\src\main\AndroidManifest.xml:1:1-2:12
++	package
++		ADDED from C:\Minor Project\OnDeviceAssistant\node_modules\react-native-tts\android\src\main\AndroidManifest.xml:1:70-94
++		INJECTED from C:\Minor Project\OnDeviceAssistant\node_modules\react-native-tts\android\src\main\AndroidManifest.xml
++	xmlns:android
++		ADDED from C:\Minor Project\OnDeviceAssistant\node_modules\react-native-tts\android\src\main\AndroidManifest.xml:1:11-69
++uses-sdk
++INJECTED from C:\Minor Project\OnDeviceAssistant\node_modules\react-native-tts\android\src\main\AndroidManifest.xml reason: use-sdk injection requested
++INJECTED from C:\Minor Project\OnDeviceAssistant\node_modules\react-native-tts\android\src\main\AndroidManifest.xml
++INJECTED from C:\Minor Project\OnDeviceAssistant\node_modules\react-native-tts\android\src\main\AndroidManifest.xml
++	android:targetSdkVersion
++		INJECTED from C:\Minor Project\OnDeviceAssistant\node_modules\react-native-tts\android\src\main\AndroidManifest.xml
++	android:minSdkVersion
++		INJECTED from C:\Minor Project\OnDeviceAssistant\node_modules\react-native-tts\android\src\main\AndroidManifest.xml
+diff --git a/node_modules/react-native-tts/android/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin b/node_modules/react-native-tts/android/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin
+new file mode 100644
+index 0000000..6a68786
+Binary files /dev/null and b/node_modules/react-native-tts/android/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin differ
