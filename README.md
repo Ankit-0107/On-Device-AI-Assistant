@@ -30,7 +30,6 @@ On-Device-AI-Assistant/
     ├── babel.config.js             # Babel config
     ├── tsconfig.json               # TypeScript config
     ├── patches/                    # patch-package patches (auto-applied on npm install)
-    │   ├── @react-native-community+voice+1.1.9.patch
     │   └── react-native-tts+4.1.1.patch
     ├── src/
     │   ├── components/
@@ -216,7 +215,7 @@ cd On-Device-AI-Assistant/OnDeviceAssistant
 npm install
 ```
 
-> `npm install` will automatically run `patch-package` (via the `postinstall` script) to apply the required patches in the `patches/` folder. These fix compatibility issues with `react-native-tts` and `@react-native-community/voice`.
+> `npm install` will automatically run `patch-package` (via the `postinstall` script) to apply the required patch in the `patches/` folder. This fixes compatibility issues with `react-native-tts`.
 
 ---
 
@@ -349,7 +348,7 @@ The app should launch automatically on the emulator once the build completes.
 |---------|---------|
 | `llama.rn` | React Native bindings for `llama.cpp` — on-device LLM inference |
 | `react-native-tts` | Text-to-Speech — assistant reads responses aloud |
-| `@react-native-community/voice` | Speech-to-Text — voice input via microphone |
+| `SpeechModule` (Custom) | Speech-to-Text — Native Android/iOS voice input via microphone |
 | `react-native-fs` | File system access — reading model files from device storage |
 | `react-native-keychain` | Secure storage (for future use) |
 | `react-native-safe-area-context` | Safe area insets for notched devices |
