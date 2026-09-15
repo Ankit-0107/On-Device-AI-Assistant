@@ -291,6 +291,15 @@ The app should launch automatically on the emulator once the build completes.
 
 ---
 
+## 🔬 Experimental Benchmarking
+
+This repository also contains scripts and data used for testing the performance of the on-device LLM.
+- `Experiment/` directory contains Python scripts used to measure Time To First Token (TTFT), Tokens per Second (Tok/s), and Peak RAM usage across both PC and Android devices.
+- `tier1-experiments.md` and `multivariant-benchmarks.md` contain implementation plans and raw logs for statistical benchmarking across different quantization levels (F16, Q8_0, Q4_K_M).
+*(Note: Documentation/ contains drafts for the related research paper, but only the raw testing scripts and metrics logs are actively tracked here).*
+
+---
+
 ## 📊 Architecture Overview
 
 ```

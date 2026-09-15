@@ -23,7 +23,7 @@ export async function loadModel(modelPath) {
       model: modelPath,
       use_mlock: false,  // mlock is not supported on emulators
       use_mmap: true,    // memory-map the file instead
-      n_ctx: 1024,       // smaller context for emulator stability
+      n_ctx: 4096,       // Increased to 4096 to prevent history overflow crashes
       n_threads: 2,      // fewer threads for emulator
       n_gpu_layers: 0,   // CPU only on emulator
     });
@@ -79,8 +79,8 @@ export function generateStream(prompt, history, onToken, onStats, onComplete, on
     });
     fullPrompt += `<|im_start|>user\n${safePrompt}<|im_end|>\n<|im_start|>assistant\n`;
     
-    // Basic context truncation (keep last ~2000 chars if it gets too long)
-    const MAX_CHARS = 2048 * 3;
+    // Basic context truncation (keep last ~12000 chars if it gets too long)
+    const MAX_CHARS = 4096 * 3;
     if (fullPrompt.length > MAX_CHARS) {
       // Trim from the beginning but keep the system prompt
       const systemPromptLength = fullPrompt.indexOf('<|im_end|>\n') + 11;

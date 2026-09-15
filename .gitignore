@@ -35,3 +35,7 @@ yarn-error.log*
 .env.local
 __pycache__/
 *.pyc
+
+# Local experiments and drafts
+Documentation/
+Experiment/llama-cpp-demo-quantization/

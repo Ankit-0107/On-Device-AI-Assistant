@@ -1,0 +1,405 @@
+{
+  "summary": {
+    "Qwen2.5-1.5B-Instruct-f16.gguf": {
+      "model": "Qwen2.5-1.5B-Instruct-f16.gguf",
+      "iterations": 15,
+      "metrics": {
+        "load_time_s": {
+          "mean": 0.6269,
+          "std_dev": 0.1082,
+          "ci_95": 0.0547
+        },
+        "ttft_s": {
+          "mean": 0.9522,
+          "std_dev": 0.2168,
+          "ci_95": 0.1097
+        },
+        "tok_sec": {
+          "mean": 12.65,
+          "std_dev": 1.1196,
+          "ci_95": 0.5666
+        },
+        "peak_ram_mb": {
+          "mean": 3059.9307,
+          "std_dev": 27.5804,
+          "ci_95": 13.9576
+        }
+      }
+    },
+    "Qwen2.5-1.5B-Instruct-Q8_0.gguf": {
+      "model": "Qwen2.5-1.5B-Instruct-Q8_0.gguf",
+      "iterations": 15,
+      "metrics": {
+        "load_time_s": {
+          "mean": 0.4458,
+          "std_dev": 0.0799,
+          "ci_95": 0.0404
+        },
+        "ttft_s": {
+          "mean": 0.7496,
+          "std_dev": 0.2748,
+          "ci_95": 0.1391
+        },
+        "tok_sec": {
+          "mean": 24.0953,
+          "std_dev": 1.6381,
+          "ci_95": 0.829
+        },
+        "peak_ram_mb": {
+          "mean": 1673.666,
+          "std_dev": 1.8664,
+          "ci_95": 0.9445
+        }
+      }
+    },
+    "qwen2.5-1.5b-instruct-q4_k_m.gguf": {
+      "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+      "iterations": 15,
+      "metrics": {
+        "load_time_s": {
+          "mean": 0.8871,
+          "std_dev": 0.0682,
+          "ci_95": 0.0345
+        },
+        "ttft_s": {
+          "mean": 0.269,
+          "std_dev": 0.0147,
+          "ci_95": 0.0075
+        },
+        "tok_sec": {
+          "mean": 35.0613,
+          "std_dev": 0.707,
+          "ci_95": 0.3578
+        },
+        "peak_ram_mb": {
+          "mean": 1643.7947,
+          "std_dev": 2.5192,
+          "ci_95": 1.2749
+        }
+      }
+    }
+  },
+  "raw_runs": {
+    "Qwen2.5-1.5B-Instruct-f16.gguf": [
+      {
+        "iteration": 1,
+        "load_time_s": 0.9866,
+        "ttft_s": 0.7599,
+        "tok_sec": 14.29,
+        "peak_ram_mb": 3077.81
+      },
+      {
+        "iteration": 2,
+        "load_time_s": 0.5308,
+        "ttft_s": 0.6858,
+        "tok_sec": 14.47,
+        "peak_ram_mb": 3078.83
+      },
+      {
+        "iteration": 3,
+        "load_time_s": 0.5228,
+        "ttft_s": 0.7022,
+        "tok_sec": 14.48,
+        "peak_ram_mb": 3080.72
+      },
+      {
+        "iteration": 4,
+        "load_time_s": 0.5182,
+        "ttft_s": 0.7116,
+        "tok_sec": 14.41,
+        "peak_ram_mb": 3082.79
+      },
+      {
+        "iteration": 5,
+        "load_time_s": 0.5387,
+        "ttft_s": 0.7069,
+        "tok_sec": 13.02,
+        "peak_ram_mb": 3079.56
+      },
+      {
+        "iteration": 6,
+        "load_time_s": 0.5858,
+        "ttft_s": 0.7139,
+        "tok_sec": 12.4,
+        "peak_ram_mb": 3081.83
+      },
+      {
+        "iteration": 7,
+        "load_time_s": 0.5988,
+        "ttft_s": 0.8933,
+        "tok_sec": 11.95,
+        "peak_ram_mb": 3083.78
+      },
+      {
+        "iteration": 8,
+        "load_time_s": 0.6683,
+        "ttft_s": 1.162,
+        "tok_sec": 11.52,
+        "peak_ram_mb": 3079.94
+      },
+      {
+        "iteration": 9,
+        "load_time_s": 0.6709,
+        "ttft_s": 1.1569,
+        "tok_sec": 11.49,
+        "peak_ram_mb": 3037.52
+      },
+      {
+        "iteration": 10,
+        "load_time_s": 0.6413,
+        "ttft_s": 1.0072,
+        "tok_sec": 12.18,
+        "peak_ram_mb": 3059.66
+      },
+      {
+        "iteration": 11,
+        "load_time_s": 0.6256,
+        "ttft_s": 1.0284,
+        "tok_sec": 11.95,
+        "peak_ram_mb": 3003.91
+      },
+      {
+        "iteration": 12,
+        "load_time_s": 0.6359,
+        "ttft_s": 1.2925,
+        "tok_sec": 11.7,
+        "peak_ram_mb": 3053.54
+      },
+      {
+        "iteration": 13,
+        "load_time_s": 0.624,
+        "ttft_s": 1.1952,
+        "tok_sec": 11.96,
+        "peak_ram_mb": 2995.71
+      },
+      {
+        "iteration": 14,
+        "load_time_s": 0.6321,
+        "ttft_s": 1.2357,
+        "tok_sec": 11.88,
+        "peak_ram_mb": 3050.54
+      },
+      {
+        "iteration": 15,
+        "load_time_s": 0.6231,
+        "ttft_s": 1.0322,
+        "tok_sec": 12.05,
+        "peak_ram_mb": 3052.82
+      }
+    ],
+    "Qwen2.5-1.5B-Instruct-Q8_0.gguf": [
+      {
+        "iteration": 1,
+        "load_time_s": 0.7143,
+        "ttft_s": 0.8572,
+        "tok_sec": 23.8,
+        "peak_ram_mb": 1675.34
+      },
+      {
+        "iteration": 2,
+        "load_time_s": 0.447,
+        "ttft_s": 0.6544,
+        "tok_sec": 23.35,
+        "peak_ram_mb": 1671.96
+      },
+      {
+        "iteration": 3,
+        "load_time_s": 0.4687,
+        "ttft_s": 1.0885,
+        "tok_sec": 19.91,
+        "peak_ram_mb": 1673.82
+      },
+      {
+        "iteration": 4,
+        "load_time_s": 0.496,
+        "ttft_s": 1.2913,
+        "tok_sec": 21.96,
+        "peak_ram_mb": 1675.77
+      },
+      {
+        "iteration": 5,
+        "load_time_s": 0.4663,
+        "ttft_s": 0.7033,
+        "tok_sec": 24.8,
+        "peak_ram_mb": 1672.02
+      },
+      {
+        "iteration": 6,
+        "load_time_s": 0.4298,
+        "ttft_s": 0.5814,
+        "tok_sec": 24.87,
+        "peak_ram_mb": 1674.24
+      },
+      {
+        "iteration": 7,
+        "load_time_s": 0.4183,
+        "ttft_s": 0.5499,
+        "tok_sec": 25.5,
+        "peak_ram_mb": 1675.4
+      },
+      {
+        "iteration": 8,
+        "load_time_s": 0.4002,
+        "ttft_s": 0.5623,
+        "tok_sec": 25.81,
+        "peak_ram_mb": 1672.68
+      },
+      {
+        "iteration": 9,
+        "load_time_s": 0.3903,
+        "ttft_s": 0.5952,
+        "tok_sec": 25.28,
+        "peak_ram_mb": 1674.23
+      },
+      {
+        "iteration": 10,
+        "load_time_s": 0.3874,
+        "ttft_s": 0.5855,
+        "tok_sec": 25.63,
+        "peak_ram_mb": 1675.73
+      },
+      {
+        "iteration": 11,
+        "load_time_s": 0.4044,
+        "ttft_s": 0.6542,
+        "tok_sec": 24.95,
+        "peak_ram_mb": 1672.82
+      },
+      {
+        "iteration": 12,
+        "load_time_s": 0.3952,
+        "ttft_s": 0.5599,
+        "tok_sec": 24.2,
+        "peak_ram_mb": 1674.67
+      },
+      {
+        "iteration": 13,
+        "load_time_s": 0.4782,
+        "ttft_s": 1.4135,
+        "tok_sec": 21.69,
+        "peak_ram_mb": 1668.48
+      },
+      {
+        "iteration": 14,
+        "load_time_s": 0.3896,
+        "ttft_s": 0.576,
+        "tok_sec": 24.59,
+        "peak_ram_mb": 1672.98
+      },
+      {
+        "iteration": 15,
+        "load_time_s": 0.4007,
+        "ttft_s": 0.5713,
+        "tok_sec": 25.09,
+        "peak_ram_mb": 1674.85
+      }
+    ],
+    "qwen2.5-1.5b-instruct-q4_k_m.gguf": [
+      {
+        "iteration": 1,
+        "load_time_s": 1.1346,
+        "ttft_s": 0.2503,
+        "tok_sec": 36.24,
+        "peak_ram_mb": 1643.86
+      },
+      {
+        "iteration": 2,
+        "load_time_s": 0.9095,
+        "ttft_s": 0.2885,
+        "tok_sec": 33.37,
+        "peak_ram_mb": 1645.57
+      },
+      {
+        "iteration": 3,
+        "load_time_s": 0.8876,
+        "ttft_s": 0.2625,
+        "tok_sec": 34.36,
+        "peak_ram_mb": 1640.38
+      },
+      {
+        "iteration": 4,
+        "load_time_s": 0.8775,
+        "ttft_s": 0.2513,
+        "tok_sec": 34.61,
+        "peak_ram_mb": 1642.22
+      },
+      {
+        "iteration": 5,
+        "load_time_s": 0.8643,
+        "ttft_s": 0.2893,
+        "tok_sec": 35.41,
+        "peak_ram_mb": 1643.8
+      },
+      {
+        "iteration": 6,
+        "load_time_s": 0.8495,
+        "ttft_s": 0.2747,
+        "tok_sec": 35.57,
+        "peak_ram_mb": 1645.56
+      },
+      {
+        "iteration": 7,
+        "load_time_s": 0.866,
+        "ttft_s": 0.2532,
+        "tok_sec": 36.05,
+        "peak_ram_mb": 1640.43
+      },
+      {
+        "iteration": 8,
+        "load_time_s": 0.864,
+        "ttft_s": 0.245,
+        "tok_sec": 35.48,
+        "peak_ram_mb": 1642.06
+      },
+      {
+        "iteration": 9,
+        "load_time_s": 0.8651,
+        "ttft_s": 0.293,
+        "tok_sec": 34.31,
+        "peak_ram_mb": 1644.11
+      },
+      {
+        "iteration": 10,
+        "load_time_s": 0.8523,
+        "ttft_s": 0.2807,
+        "tok_sec": 35.33,
+        "peak_ram_mb": 1645.79
+      },
+      {
+        "iteration": 11,
+        "load_time_s": 0.8585,
+        "ttft_s": 0.2636,
+        "tok_sec": 35.27,
+        "peak_ram_mb": 1647.58
+      },
+      {
+        "iteration": 12,
+        "load_time_s": 0.8535,
+        "ttft_s": 0.2788,
+        "tok_sec": 34.97,
+        "peak_ram_mb": 1649.02
+      },
+      {
+        "iteration": 13,
+        "load_time_s": 0.8975,
+        "ttft_s": 0.2664,
+        "tok_sec": 35.26,
+        "peak_ram_mb": 1640.34
+      },
+      {
+        "iteration": 14,
+        "load_time_s": 0.862,
+        "ttft_s": 0.2738,
+        "tok_sec": 34.53,
+        "peak_ram_mb": 1642.14
+      },
+      {
+        "iteration": 15,
+        "load_time_s": 0.8641,
+        "ttft_s": 0.2636,
+        "tok_sec": 35.16,
+        "peak_ram_mb": 1644.06
+      }
+    ]
+  }
+}
